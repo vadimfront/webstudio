@@ -8,3 +8,18 @@
     text-transform: uppercase;
     letter-spacing: 0.03em;
 }
+
+@mixin close_btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-type_2;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color, border-color, fill;
+}

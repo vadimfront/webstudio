@@ -6,6 +6,9 @@ body {
     line-height: 1.5;
     color: $grey-type_2;
     letter-spacing: 0.02em;
+    &.scroll_disabled {
+        overflow-y: hidden;
+    }
 }
 
 h1,
