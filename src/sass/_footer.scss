@@ -1,0 +1,108 @@
+.footer {
+    padding: 100px 0;
+    background-color: $grey-type_1;
+    .footer_content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 72px;
+    }
+}
+
+.footer_mod-1 {
+    max-width: 264px;
+    color: $white-type_2;
+    & > .logo {
+        @include logo;
+        justify-content: center;
+        line-height: 1.16;
+        margin-bottom: 16px;
+        & > .logo_customStyle {
+            color: $white;
+        }
+    }
+}
+.footer_mod-2 {
+    .footer_title {
+        color: $white;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    & > .footer_mod_social_links {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 16px;
+        a {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            background-color: $grey-type_2;
+            border-radius: 50%;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            &:hover,
+            &:focus {
+                background-color: $green;
+            }
+            .icon {
+                fill: $white;
+            }
+        }
+    }
+}
+
+.footer_mod-3 {
+    width: 100%;
+    & > .footer_title {
+        color: $white;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .subscribe_form {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-direction: column;
+        & > .subscribe_form_input {
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            border-radius: 4px;
+            padding: 8px 16px;
+            background-color: transparent;
+            color: var(--white);
+            -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+            &::placeholder {
+                letter-spacing: 0.04em;
+                color: rgba(255, 255, 255, 0.6);
+                font-size: 12px;
+                line-height: 2;
+            }
+        }
+        & > .subscribe_form_btn {
+            max-width: 165px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 16px;
+            line-height: 0.6;
+            letter-spacing: 0.04em;
+            background-color: $primary;
+            color: $white;
+            padding: 8px 24px;
+            border-radius: 4px;
+            border: none;
+            transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            &:hover,
+            &:focus {
+                background-color: $primary-dark;
+            }
+        }
+    }
+}

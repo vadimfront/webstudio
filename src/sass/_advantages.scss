@@ -1,0 +1,32 @@
+.advantages {
+    .container {
+        max-width: 100%;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 72px 24px;
+        li {
+            flex-basis: 100%;
+            .advantages_image {
+                display: none;
+                height: 112px;
+                margin-bottom: 8px;
+                background-color: var(--grey-type_3);
+                text-align: center;
+            }
+            .advantages_title {
+                margin-bottom: 8px;
+                font-size: 36px;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                line-height: 1.11;
+                text-transform: capitalize;
+                text-align: center;
+            }
+            .advantages_text {
+                font-weight: 500;
+            }
+        }
+    }
+}
