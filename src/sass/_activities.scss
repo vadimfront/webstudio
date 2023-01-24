@@ -1,0 +1,15 @@
+.activities {
+    display: none;
+    padding-top: 0;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        & > li {
+            flex-basis: calc((100% - 48px)/3);
+        }
+    }
+    @include respond(lg) {
+        display: block;
+    }
+}

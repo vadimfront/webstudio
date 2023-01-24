@@ -9,12 +9,21 @@
     background-size: cover;
     text-align: center;
     h1 {
+        width: 319px;
         margin: 0 auto 48px auto;
         font-size: 36px;
         line-height: 1.1;
         font-weight: 700;
         letter-spacing: 0.02em;
         color: #fff;
+        @include respond(sm) {
+            width: auto;
+        }
+        @include respond(md) {
+            width: 496px;
+            font-size: 56px;
+            line-height: 1.07;
+        }
     }
     .btn_primary {
         padding: 16px 32px;
@@ -32,6 +41,25 @@
         &:hover,
         &:focus {
             background-color: $primary-dark;
+        }
+    }
+    @include img-2x {
+        background-image: linear-gradient(rgb(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url('../images/banner_mobile2x.jpg');
+    }
+    @media screen and (min-width: 481px) {
+        background-image: linear-gradient(rgb(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/banner_tablet.jpg);
+        @include img-2x {
+            background-image: linear-gradient(rgb(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/banner_tablet2x.jpg);
+        }
+    }
+    @include respond(lg) {
+        height: 600px;
+        padding: 187px 0;
+    }
+    @media screen and (min-width: 769px) {
+        background-image: linear-gradient(rgb(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/banner_desktop.jpg);
+        @include img-2x {
+            background-image: linear-gradient(rgb(46, 47, 66, 0.7), rgb(46, 47, 66, 0.7)), url(../images/banner_desktop2x.jpg);
         }
     }
 }

@@ -5,6 +5,10 @@
 
         .header_nav_list {
             display: none;
+            @include respond(md) {
+                display: flex;
+                gap: 40px;
+            }
         }
 
         a {
@@ -13,7 +17,7 @@
             padding-top: 24px;
             padding-bottom: 28px;
             font-weight: 700;
-            color: var(--grey-type_1);
+            color: $grey-type_1;
             transition-duration: 250ms;
             transition-property: color, height;
             transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -41,6 +45,12 @@
             background: none;
             border: none;
             cursor: pointer;
+            @include respond(md) {
+                display: none;
+            }
+        }
+        @include respond(md) {
+            margin-left: 77px;
         }
     }
     .header_container {
@@ -50,6 +60,13 @@
         align-items: center;
         padding-top: 24px;
         padding-bottom: 24px;
+        @include respond(md) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        @include respond(md) {
+            max-width: 1128px;
+        }
         .logo {
             @include logo;
             .logo_customStyle {
@@ -68,6 +85,15 @@
                 &:focus {
                     color: $primary;
                 }
+            }
+            @include respond(md) {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+            }
+            @include respond(lg) {
+                flex-direction: row;
+                gap: 40px;
             }
         }
     }

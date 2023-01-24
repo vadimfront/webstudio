@@ -42,6 +42,12 @@ a {
     padding: 0 15px;
     margin: 0 auto;
     box-sizing: content-box;
+    @include respond(md) {
+        max-width: 736px;
+    }
+    @include respond(lg) {
+        max-width: 1128px;
+    }
 }
 
 .section {

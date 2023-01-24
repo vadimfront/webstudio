@@ -1,4 +1,12 @@
 .customers {
+    .container {
+        @include respond(md) {
+            max-width: 552px;
+        }
+        @include respond(lg) {
+            max-width: 1128px;
+        }
+    }
     .title {
         line-height: 1.11;
         letter-spacing: 0.02em;
@@ -35,6 +43,18 @@
                 fill: currentColor;
                 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
             }
+            @include respond(md) {
+                flex-basis: calc((100% - 48px)/ 3);
+            }
+            @include respond(lg) {
+                flex-basis: calc((100% - 120px)/ 6);
+            }
+        }
+        @include respond(md) {
+            gap: 72px 24px;
+        }
+        @include respond(lg) {
+            gap: 24px;
         }
     }
 }

@@ -1,6 +1,9 @@
 .advantages {
     .container {
         max-width: 100%;
+        @include respond(lg) {
+            max-width: 1128px;
+        }
     }
     ul {
         display: flex;
@@ -14,6 +17,11 @@
                 margin-bottom: 8px;
                 background-color: var(--grey-type_3);
                 text-align: center;
+                @include respond(lg) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
             .advantages_title {
                 margin-bottom: 8px;
@@ -23,10 +31,29 @@
                 line-height: 1.11;
                 text-transform: capitalize;
                 text-align: center;
+                @include respond(md) {
+                    text-align: inherit;
+                }
+                @include respond(lg) {
+                    font-size: 20px;
+                    line-height: 1.2;
+                }
             }
             .advantages_text {
                 font-weight: 500;
+                @include respond(lg) {
+                    font-weight: 400;
+                }
             }
+            @include respond(md) {
+                flex-basis: calc((100% - 24px)/ 2);
+            }
+            @include respond(lg) {
+                flex-basis: calc((100% - 72px)/ 4);
+            }
+        }
+        @include respond(lg) {
+            gap: 24px;
         }
     }
 }

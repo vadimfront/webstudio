@@ -23,3 +23,30 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, background-color, border-color, fill;
 }
+$screen-xs: 320px;
+$screen-sm: 480px;
+$screen-md: 768px;
+$screen-lg: 1200px;
+
+@mixin respond($media) {
+  @if $media == xs {
+    @media only screen and (min-width: $screen-xs) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (min-width: $screen-sm) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (min-width: $screen-md) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: $screen-lg) { @content; }
+  }
+}
+
+  @mixin img-2x {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      @content
+    }
+  } 
