@@ -1,0 +1,120 @@
+.portfolio {
+    padding-top: 96px;
+    .tab_control {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 24px;
+        margin-bottom: 48px;
+        & > .tab_control_item {
+            & > button {
+                padding: 12px 24px;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                border-radius: 4px;
+                background: $grey-type_3;
+                border: 1px solid $white-type_2;
+                color: $primary;
+                cursor: pointer;
+                transition-duration: 250ms;
+                transition-property: box-shadow, background-color, border-color, color;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                &:hover,
+                &:focus {
+                    background-color: $primary;
+                    color: $white;
+                    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+                    border-color: transparent;
+                }
+                &:active {
+                    color: $white;
+                    background-color: $primary-dark;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+        @include respond(md) {
+            justify-content: center;
+            margin-bottom: 64px;
+        }
+        @include respond(md) {
+            margin-bottom: 72px;
+        }
+    }
+    .tab_list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 48px;
+        .tab_list_image {
+            position: relative;
+            overflow: hidden;
+            & > img {
+                width: 100%;
+            }
+            .tab_hover {
+                position: absolute;
+                background-color: $primary;
+                color: $grey-type_3;
+                letter-spacing: 0.02em;
+                padding: 40px 32px;
+                top: 0;
+                bottom: 0;
+                color: $primary;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-property: transform, color;
+                transform: translateY(101%);
+            }
+        }
+        & > li {
+            width: 100%;
+            max-width: 396px;
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+            .tab_list_link {
+                display: block;
+                transition-duration: 250ms;
+                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                transition-property: box-shadow;
+                &:hover,
+                &:focus {
+                    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+                }
+                .tab_list_content {
+                    padding: 32px 16px;
+                    border: 0.5px solid $grey-type_3;
+                    border-top: 0;
+                    .tab_title  {
+                        margin-bottom: 8px;
+                        font-size: 20px;
+                        font-weight: 700;
+                        letter-spacing: 0.02em;
+                        line-height: 1.2;
+                        color: $grey-type_1;
+                    }
+                    .tab_subTitle  {
+                        color: $grey-type_2;
+                    }
+                }
+                &:hover .tab_hover,
+                &:focus .tab_hover {
+                    color: $white;
+                    transform: translateY(0);
+                }
+            }
+            @include respond(md) {
+                flex-basis: calc((100% - 24px)/2);
+            }
+            @include respond(lg) {
+                flex-basis: calc((100% - 48px)/3);
+            }
+        }
+        @include respond(md) {
+            gap: 72px 24px;
+        }
+        @include respond(lg) {
+            gap: 48px 24px;
+        }
+    }
+}

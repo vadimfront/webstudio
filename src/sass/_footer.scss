@@ -6,6 +6,15 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 72px;
+        @include respond(md) {
+            max-width: 552px;
+            column-gap: 24px;
+            justify-content: flex-start;
+        }
+        @include respond(lg) {
+            max-width: 1128px;
+            gap: 0;
+        }
     }
 }
 
@@ -20,6 +29,12 @@
         & > .logo_customStyle {
             color: $white;
         }
+        @include respond(md) {
+            justify-content: flex-start;
+        }
+    }
+    @include respond(lg) {
+        margin-right: 120px;
     }
 }
 .footer_mod-2 {
@@ -29,6 +44,9 @@
         letter-spacing: 0.02em;
         margin-bottom: 16px;
         text-align: center;
+        @include respond(md) {
+            text-align: inherit;
+        }
     }
     & > .footer_mod_social_links {
         display: flex;
@@ -51,6 +69,9 @@
                 fill: $white;
             }
         }
+    }
+    @include respond(lg) {
+        margin-right: 80px;
     }
 }
 
@@ -83,6 +104,9 @@
                 font-size: 12px;
                 line-height: 2;
             }
+            @include respond(md) {
+                width: 100%;
+            }
         }
         & > .subscribe_form_btn {
             max-width: 165px;
@@ -104,5 +128,11 @@
                 background-color: $primary-dark;
             }
         }
+        @include respond(md) {
+            flex-direction: row;
+        }
+    }
+    @include respond(md) {
+        width: auto;
     }
 }
