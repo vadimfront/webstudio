@@ -15,7 +15,7 @@
                 display: none;
                 height: 112px;
                 margin-bottom: 8px;
-                background-color: var(--grey-type_3);
+                background-color: $grey-type_3;
                 text-align: center;
                 @include respond(lg) {
                     display: flex;
