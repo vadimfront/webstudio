@@ -36,7 +36,6 @@
             position: absolute;
             top: 24px;
             right: 24px;
-            color: $grey-type_1;
             @include close_btn;
         }
         & > .modal_content_title {
