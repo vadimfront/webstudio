@@ -37,7 +37,7 @@
             top: 24px;
             right: 24px;
             color: $grey-type_1;
-            fill: currentColor;
+            @include close_btn;
         }
         & > .modal_content_title {
             font-weight: 500;
