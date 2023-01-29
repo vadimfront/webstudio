@@ -83,6 +83,9 @@
         letter-spacing: 0.02em;
         margin-bottom: 16px;
         text-align: center;
+        @include respond(md) {
+            text-align: inherit;
+        }
     }
     .subscribe_form {
         display: flex;
